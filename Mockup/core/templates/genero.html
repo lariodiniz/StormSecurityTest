@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+		<header class="fix">
+			<h1 class="fl">{{ generos.type }}</h1>
+			<form action="." method="POST">
+				{% csrf_token %}
+				{{ form.as_p }}
+			</form>
+		</header>
+		<div  id="linha1">
+		<hr/>
+		</div>
+		<section id="listagem2" class='fix'>
+			{%for movie in movies %}
+				<a href="{{ movie.get_absolute_url }}"><img src="{{ STATIC_URL }}img/movies/{{ movie.img }}.jpg"  width=138 height=188 alt=""></a>		
+			{% endfor %}
+		</section>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Storm Security - Teste Python</title>
+	<link type="text/css" href="{{ STATIC_URL }}css/style.css"
+		rel="stylesheet" media="screen" />
+</head>
+<body>
+	<header id="header">
+		<div class="content">
+			<a id="img_home" class="home" href="{% url 'homepage' %}" title="voltar para home"><img src="{{ STATIC_URL }}img/home.gif" alt=""></a>
+		</div>
+		</header>
+	<main id="Content" class="fix">
+			{% block content %}
+			{% endblock content %}		
+	</main>
+</body>
+</html>

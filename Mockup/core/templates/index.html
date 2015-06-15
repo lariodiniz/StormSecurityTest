@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1 class="fl" id="tit_home">Listagem de filmes</h1>
+	<form id="ordenar" action="." method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+	</form>
+	<hr />
+	{%for movie in movies %}
+		<a id="movies" href="{{ movie.get_absolute_url }}"><img src="{{ STATIC_URL }}img/movies/{{ movie.img }}.jpg" width=138 height=188 alt=""></a>		
+	{% endfor %}
+{% endblock content %}

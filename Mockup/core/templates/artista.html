@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+		<header class="fix">
+			<h1>Atores</h1>
+		</header>
+		
+		<section id="Infos" class='fix'>
+			<figure class="fl"><img src="{{ STATIC_URL }}img/actors/{{ ator.img }}.jpg" width=200 height=280  alt=""></figure>
+			<article class="fl">
+				<p class="tit">Ator</p>
+				<h2>{{ ator.name }}</h2>
+				<p class="txt"><strong>País:</strong> {{ ator.parents }}</br>
+				<strong>Descrição:</strong></br> {{ ator.description }}</p>
+				
+			</article>
+
+		</section>
+	<div  id="linha2">
+		<hr/>
+	</div>
+	<section id="listagem" class='fix'>
+		{% include 'relacao.html' %}
+	</section>
+{% endblock content %}

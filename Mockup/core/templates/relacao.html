@@ -1,0 +1,10 @@
+<header class="fix">
+<h2>Filmes Relacionados</h2>
+</header>
+{% for movie in relacionados %}
+	<a href="{{ movie.get_absolute_url }}"><img src="{{ STATIC_URL }}img/movies/{{ movie.img }}.jpg" width=145 height=190 alt=""></a>
+{% endfor %}
+<p></br>
+</p>
+			
+		

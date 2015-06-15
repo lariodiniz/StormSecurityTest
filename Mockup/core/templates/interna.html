@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+	<header class="fix">
+		<h1>{{ movie.name }}</h1>		
+	</header>
+	<div  id="linha1">
+		<hr/>
+	</div>
+	<section id="Infos" class='fix'>		
+
+		<figure class="fl"><img src="{{ STATIC_URL }}img/movies/{{ movie.img }}.jpg" width=200 height=280 alt=""></figure>
+		<article class="fl">
+			<p class="tit">Sinopse:</br>
+			{{ movie.synopsis }}</br></br>
+			Genero:</br>			
+				{% for genero in generos %}
+					<a href="{{ genero.get_absolute_url }}">{{ genero.type }}</a> 
+				{% endfor %}</br></br>		
+			Atores:</br>			
+				{% for ator in atores %}
+					<a href="{{ ator.get_absolute_url }}">{{ ator.name }}</a> 
+				{% endfor %}
+			</p>
+		</article>
+	</section>
+	<div  id="linha2">
+		<hr/>
+	</div>
+	<section id="listagem" class='fix'>
+		{% include 'relacao.html' %}
+	</section>
+
+{% endblock content %}

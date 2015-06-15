@@ -1,0 +1,5 @@
+Django==1.7
+dj-database-url==0.2.1
+gunicorn==19.3.0.3
+virtualenv==13.0.3
+django-grappelli==2.6.5
