@@ -112,3 +112,9 @@ TEMPLATE_CONTEXT_PROCESSORS=('django.contrib.auth.context_processors.auth',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     "django.core.context_processors.request",)
+
+#--------------//////////----------------------
+# Configuração para o Heroku Comentar esta parte caso nescessite usar local.
+#--------------//////////----------------------
+DEBUG = os.environ.get('DEBUG') == 'True'
+ALLOWED_HOSTS = ['.localhost','127.0.0.1','.herokuapp.com']

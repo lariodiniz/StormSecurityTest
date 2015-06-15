@@ -27,4 +27,11 @@ urlpatterns = patterns('',
     #url(r'^admin/', include(admin.site.urls)),
 )
 
+#--------------//////////----------------------
+# Configuração para o Heroku Comentar esta parte caso nescessite usar local.
+#--------------//////////----------------------
+
+urlpatterns += patterns('django.views.static',
+                        url(r'^static/(?P<path>.*)$','serve',{'document_root': settings.STATIC_ROOT}),
+                        )
 
