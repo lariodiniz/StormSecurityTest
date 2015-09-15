@@ -16,6 +16,7 @@ from django.db.models import signals
 from django.template.defaultfilters import slugify
 
 
+
 class Actors(models.Model):
     "Modelo da tabela de Atores"
     name=models.CharField(_('Nome'), max_length=250)
@@ -33,7 +34,7 @@ class Actors(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('Mockup.core.views.actor_detail', kwargs={'slug': self.slug})
+        return reverse('actor_detail', kwargs={'slug': self.slug})
 
 class Genres(models.Model):
     "Modelo da tabela Generos"
@@ -50,7 +51,7 @@ class Genres(models.Model):
         return self.type
 
     def get_absolute_url(self):
-        return reverse('Mockup.core.views.genres_detail', kwargs={'slug': self.slug})
+        return reverse('genre_detail', kwargs={'slug': self.slug})
 
 class Movies(models.Model):
     "Modelo da tabela de Filmes"
@@ -74,7 +75,7 @@ class Movies(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('Mockup.core.views.movie_detail', kwargs={'slug': self.slug})
+        return reverse('movie_detail', kwargs={'slug': self.slug})
     
 # ---------- Funções ------------#
 def Movie_pre_save(signal, instance, sender, **kwargs):

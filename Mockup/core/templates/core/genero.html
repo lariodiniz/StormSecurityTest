@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% block sutitulo %}{{ object.type }}{% endblock %}
+{% block content %}
+
+		<section id="listagem" class='fix'>
+			<ul>
+                {% for movie in movies %}
+                    {% load staticfiles %}
+                    <li class="fl"><a href="{{ movie.get_absolute_url }}"><img src="{{ STATIC_URL }}core/img/movies/{{ movie.img }}.jpg" alt="{{ movie.name }}"></a></li>
+                {% endfor %}
+
+			</ul>
+		</section>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>{% block titulo %}Storm Security - Teste Python{% endblock %}</title>
+		{% block meta %}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+			<meta name="keywords" content="Python, Django, Storm Security" />
+			<meta name="description" content="Teste para Storm Security feito por Lario Diniz" />
+		{% endblock meta %}
+
+		{% block style %}
+		{% load staticfiles %}
+			<link type="text/css" href="{% static 'core/css/reset.css' %}" rel="stylesheet" media="screen" />
+            <link type="text/css" href="{% static 'core/css/comum.css' %}" rel="stylesheet" media="screen" />
+		{% endblock style %}
+		
+		{% block scripts %}
+		{% endblock scripts %}-->
+	</head>
+	<body><!--
+	<header id="header">
+		<div class="content">{% load staticfiles %}
+			<a href="{% url 'homepage' %}" class="home" title="voltar para home"><img src="{% static 'core/img/ico-home.png' %}"></a>
+		</div>
+	</header>
+	<main id="Content" class="fix">
+		<header class="fix">
+			<h1 class="fl">Listagem de filmes</h1>
+			<form action="">
+				<select name="" id="" class="fr">
+					<option value="">Ordenar por:</option>
+					<option value="">a - z</option>
+					<option value="">z - a</option>
+				</select>
+			</form>
+		</header>-->
+			    {% block content %}
+                {% endblock content %}
+			    <!--{% include "core/botton.html" %}
+                {% block rodape %}
+
+                {% endblock rodape %}-->
+	</body>
+</html>

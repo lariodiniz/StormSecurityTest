@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% block listar-por %}<h1>Atores</h1>{% endblock %}
+{% block content %}
+
+
+		<section id="Infos" class='fix'>
+			<figure class="fl"><img src="{{ STATIC_URL }}core/img/actors/{{ object.img }}.jpg" alt="""></figure>
+
+			<article class="fl">
+				<p class="tit">Ator</p>
+				<h2>{{ object.name }}</h2>
+				<p class="txt"><strong>País:</strong> Brasil</p>
+				
+			</article>
+
+		</section>
+
+		<section id="listagem" class='fix'>
+			<header class="fix">
+				<h2>Filmes Relacionados</h2>
+			</header>
+			<ul>
+				{% for movie in relacionados %}
+	            <li class="fl"><a href="{{ movie.get_absolute_url }}"><img src="{{ STATIC_URL }}core/img/movies/{{ movie.img }}.jpg" alt=""></a></li>
+                {% endfor %}
+			</ul>
+		</section>
+
+
+	
+{% endblock content %}

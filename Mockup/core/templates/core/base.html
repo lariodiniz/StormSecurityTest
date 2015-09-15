@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <title>{% block titulo %}Storm Security - Teste Python{% endblock %}</title>
+        {% block meta %}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+			<meta name="keywords" content="Python, Django, Storm Security" />
+			<meta name="description" content="Teste para Storm Security feito por Lario Diniz" />
+		{% endblock meta %}
+        {% block style %}
+		{% load staticfiles %}
+			<link type="text/css" href="{% static 'core/css/reset.css' %}" rel="stylesheet" media="screen" />
+            <link type="text/css" href="{% static 'core/css/comum.css' %}" rel="stylesheet" media="screen" />
+		{% endblock style %}
+        {% block scripts %}
+
+        <script src="{{ STATIC_URL }}core/js/script.js"></script>
+		{% endblock scripts %}
+	</head>
+	<body>
+        <header id="header">
+		    <div class="content">
+			   <a href="{% url 'homepage' %}" class="home" title="voltar para home"></a>
+		    </div>
+	    </header>
+        <main id="Content" class="fix">
+        {% block listar-por %}
+        <header class="fix">
+			<h1 class=""fl">{% block sutitulo %}Listagem de filmes{% endblock sutitulo %}</h1>
+			<form action="">
+				<select name="ordenar" id="ordenar" class="fr">
+					<option value="">Ordenar por:</option>
+					<option value="">a - z</option>
+					<option value="">z - a</option>
+				</select>
+			</form>
+		</header>
+        {% endblock listar-por %}
+			    {% block content %}
+                {% endblock content %}
+        </main>
+	</body>
+</html>
